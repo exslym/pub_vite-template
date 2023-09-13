@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="#" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- Заголовок текущей страницы -->
+    <title data-title="pageTitle">TITLE</title>
+
+    <!-- for Google Analytics -->
+    <!-- MAIN_PAGE - название текущей страницы, если это многостраничный сайт, то на следующих страницах после главной можно указать, например, PAGE_1, PAGE_2 и т.д., нужно для GA -->
+    <meta name="pageTitleGAEvents" content="MAIN_PAGE" />
+    <script type="text/javascript">
+      const pageTitleGA = `${document.querySelector('meta[name="pageTitleGAEvents"]').content}`;
+      const pageTitle = `${document.querySelector('[data-title="pageTitle"]').textContent}`;
+    </script>
+
+    <script src="./scripts/index.js" type="module"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <section class="section _1" id="slide_1">
+        <div class="section__content">
+          <div class="block">
+            <h1>Main Title</h1>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="tools/jquery-3.6.3.min.js"></script>
+    <script src="tools/magnific-popup.min.js"></script>
+  </body>
+</html>
+
+<!-- 
+  <section class="section _" id="slide_">
+    <div class="section__content">
+      <div class="block">
+        
+      </div>
+    </div>
+  </section>  
+-->
+
+<!-- 
+&#8209;
+-->
