@@ -43,10 +43,7 @@
     <script type="text/javascript">
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
-        w[l].push({
-          'gtm.start': new Date().getTime(),
-          event: 'gtm.js',
-        });
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
           dl = l != 'dataLayer' ? '&l=' + l : '';
@@ -89,6 +86,19 @@
   </head>
 
   <body>
+    <!-- Google Tag Manager (GTM) -->
+    <!-- здесь вместо XXX-XXXXXXX идентификатор потока данных счетчика GTM  -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=XXX-XXXXXXX"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      >
+      </iframe>
+    </noscript>
+
+    <!-- main content -->
     <div class="wrapper">
       <section class="section _1" id="slide_1">
         <div class="section__content">
@@ -200,17 +210,5 @@
         });
       });
     </script>
-
-    <!-- Google Tag Manager (GTM) -->
-    <!-- здесь вместо XXX-XXXXXXX идентификатор потока данных счетчика GTM  -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=XXX-XXXXXXX"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      >
-      </iframe>
-    </noscript>
   </body>
 </html>
