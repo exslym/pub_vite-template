@@ -12,8 +12,7 @@
     <title data-title="pageTitle">TITLE</title>
 
     <!-- for GOOGLE ANALYTICS -->
-    <!-- MAIN_PAGE - название текущей страницы, если это многостраничный сайт, то на следующих страницах после главной можно указать, например, PAGE_1, PAGE_2 и т.д., нужно для GA -->
-
+    <!-- MAIN_PAGE - название текущей страницы, обычно совпадает с заголовком страницы, нужно для GA -->
     <meta name="pageTitleGAEvents" content="MAIN_PAGE" />
     <script type="text/javascript">
       const pageTitleGA = `${document.querySelector('meta[name="pageTitleGAEvents"]').content}`;
@@ -31,8 +30,7 @@
       gtag('js', new Date());
       gtag('config', 'X-XXXXXXXXXX');
 
-      // здесь вместо __полный_адрес_страницы__ - актуальный полный адрес (включая домен) страницы на платформе doktornarabote.ru, например: https://www.doktornarabote.ru/page/1002020.
-      // для многостраничного сайта: главная (стартовая страница - index.html) - просто прямой путь, например: https://www.doktornarabote.ru/page/1002020, остальные страницы (page1.html, page2.html, ...): с добавлением hash, например: https://www.doktornarabote.ru/page/1002020#page1 и т.д.
+      // здесь вместо __полный_адрес_страницы__ - актуальный полный адрес (включая домен) страницы на платформе doktornarabote.ru, например: https://www.doktornarabote.ru/publication/single/525432.
       gtag('set', {
         page_title: `${pageTitle}`,
         page_location: '__полный_адрес_страницы__',

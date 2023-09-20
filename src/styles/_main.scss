@@ -16,6 +16,7 @@ body {
   width: 100%;
 
   max-width: 670px;
+  background-color: $clr-wrapper;
 }
 
 .section {
@@ -23,7 +24,6 @@ body {
   max-width: 670px;
   width: 100%;
   position: relative;
-  background: $clr-white;
   &__content {
     margin: 0 auto;
     width: 100%;
