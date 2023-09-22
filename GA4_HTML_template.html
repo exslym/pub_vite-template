@@ -81,6 +81,27 @@
         setTimeout('sendGTAG(`NoBounce`, `NoBounce`, `Over 10 minutes`);', 600000);
       });
     </script>
+
+    <!-- GOOGLE ANALYTICS SLIDES VIEWS -->
+    <script type="text/javascript">
+      window.addEventListener('load', () => {
+        const slideObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(({ isIntersecting, target }) => {
+              if (!isIntersecting) return;
+              target.classList.add('_visited');
+              const eventName = `Slides`;
+              const property = `Slides`;
+              const label = `${target.id}`;
+              sendGTAG(eventName, property, label);
+            });
+          },
+          { threshold: 0.1 },
+        );
+        const slides = document.querySelectorAll('[data-id="slidesObserver"]');
+        slides.forEach((slide) => slideObserver.observe(slide));
+      });
+    </script>
   </head>
 
   <body>
@@ -98,7 +119,7 @@
 
     <!-- main content -->
     <div class="wrapper">
-      <section class="section _1" id="slide_1">
+      <section class="section _1" data-id="slidesObserver" id="slide_1">
         <div class="section__content">
           <div class="content"></div>
         </div>
