@@ -5,7 +5,7 @@
 Название параметра:
 
 ```
-NoBounce
+NoBounce_Name_of_pub
 ```
 
 Описание:
@@ -17,7 +17,7 @@ NoBounce
 Свойство или параметр:
 
 ```
-NoBounce
+NoBounce_Name_of_pub
 ```
 
 //
@@ -27,7 +27,7 @@ NoBounce
 Название параметра:
 
 ```
-Buttons
+Buttons_Name_of_pub
 ```
 
 Описание:
@@ -39,7 +39,7 @@ Buttons
 Свойство или параметр:
 
 ```
-Buttons
+Buttons_Name_of_pub
 ```
 
 //
@@ -49,7 +49,7 @@ Buttons
 Название параметра:
 
 ```
-Slides
+Slides_Name_of_pub
 ```
 
 Описание:
@@ -61,7 +61,7 @@ Slides
 Свойство или параметр:
 
 ```
-Slides
+Slides_Name_of_pub
 ```
 
 //
@@ -71,7 +71,7 @@ Slides
 Название параметра:
 
 ```
-Video
+Video_Name_of_pub
 ```
 
 Описание:
@@ -83,5 +83,5 @@ Video
 Свойство или параметр:
 
 ```
-Video
+Video_Name_of_pub
 ```
