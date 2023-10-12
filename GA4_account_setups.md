@@ -44,12 +44,12 @@ Buttons_Name_of_pub
 
 //
 
-## Slides
+## Screens
 
 Название параметра:
 
 ```
-Slides_Name_of_pub
+Screens_Name_of_pub
 ```
 
 Описание:
@@ -61,7 +61,7 @@ Slides_Name_of_pub
 Свойство или параметр:
 
 ```
-Slides_Name_of_pub
+Screens_Name_of_pub
 ```
 
 //

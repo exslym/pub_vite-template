@@ -12,8 +12,7 @@
     <title data-title="pageTitle">TITLE</title>
 
     <!-- for Google Analytics -->
-    <!-- MAIN_PAGE - название текущей страницы, если это многостраничный сайт, то на следующих страницах после главной можно указать, например, PAGE_1, PAGE_2 и т.д., нужно для GA -->
-    <meta name="pageTitleGAEvents" content="MAIN_PAGE" />
+    <meta name="pageTitleGAEvents" content="TITLE" />
     <script type="text/javascript">
       const pageTitleGA = `${document.querySelector('meta[name="pageTitleGAEvents"]').content}`;
       const pageTitle = `${document.querySelector('[data-title="pageTitle"]').textContent}`;
@@ -24,7 +23,7 @@
 
   <body>
     <div class="wrapper">
-      <section class="section _1" data-id="slidesObserver" id="slide_1">
+      <section class="section _1" data-id="screensObserver" id="screen_1">
         <div class="section__content">
           <div class="block">
             <h1>Main Title</h1>
@@ -39,7 +38,7 @@
 </html>
 
 <!-- 
-  <section class="section _" data-id="slidesObserver" id="slide_">
+  <section class="section _" data-id="screensObserver" id="screen_">
     <div class="section__content">
       <div class="block">
         
