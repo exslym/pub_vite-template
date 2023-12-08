@@ -1,9 +1,9 @@
 import '../styles/index.scss';
-import { gaScripts } from './libs/gaScripts';
+import { analytics } from './libs/analytics';
 
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
   /* for Google Analytics */
-  gaScripts('gaScripts');
+  analytics('analytics');
 });

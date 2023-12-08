@@ -53,7 +53,7 @@ export function videoPlayer(startButton, startedClass) {
     <video preload="auto" data-label="Video" data-target="video1" id="video1">
       <source src="video/video.mp4" type="video/mp4" />
     </video>
-    <div class="startButton" data-target="video1"></div>
+    <div class="startButton" data-target="video1">Start Video1</div>
   </div>
 */
 
