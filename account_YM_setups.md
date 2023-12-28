@@ -7,14 +7,14 @@
 Название параметра:
 
 ```
-NoBounce "Over 5 seconds"
-NoBounce "Over 10 seconds"
-NoBounce "Over 15 seconds"
-NoBounce "Over 30 seconds"
-NoBounce "Over 45 seconds"
-NoBounce "Over 1 minute"
-NoBounce "Over 2 minutes"
-NoBounce "Over 5 minutes"
+NoBounce_5sec
+NoBounce_10sec
+NoBounce_15sec
+NoBounce_30sec
+NoBounce_45sec
+NoBounce_1min
+NoBounce_2min
+NoBounce_5min
 ```
 
 Тип условия: JavaScript-событие
@@ -22,14 +22,14 @@ NoBounce "Over 5 minutes"
 Идентификатор цели: (совпадает)
 
 ```
-5sec
-10sec
-15sec
-30sec
-45sec
-1min
-2min
-5min
+NoBounce_5sec
+NoBounce_10sec
+NoBounce_15sec
+NoBounce_30sec
+NoBounce_45sec
+NoBounce_1min
+NoBounce_2min
+NoBounce_5min
 ```
 
 //
@@ -39,16 +39,16 @@ NoBounce "Over 5 minutes"
 Название параметра:
 
 ```
-Экран "screen_1"
-Экран "screen_2"
-Экран "screen_3"
-Экран "screen_4"
-Экран "screen_5"
-Экран "screen_6"
-Экран "screen_7"
-Экран "screen_8"
-Экран "screen_9"
-Экран "screen_10"
+screen_1
+screen_2
+screen_3
+screen_4
+screen_5
+screen_6
+screen_7
+screen_8
+screen_9
+screen_10
 ...
 ...
 ```
