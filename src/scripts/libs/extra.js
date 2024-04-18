@@ -33,7 +33,7 @@ export let isMobile = {
       isMobile.Opera() ||
       isMobile.Windows()
     );
-  },
+  }
 };
 
 /* Добавление класса touch для HTML если браузер мобильный */
@@ -153,7 +153,7 @@ export function dataMediaQueries(array, dataSetValue) {
         });
         mdQueriesArray.push({
           itemsArray,
-          matchMedia,
+          matchMedia
         });
       });
       return mdQueriesArray;

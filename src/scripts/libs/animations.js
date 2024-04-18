@@ -13,8 +13,8 @@ export function elementAnimation(elementClass, animationClass) {
           });
         },
         {
-          threshold: 0.3,
-        },
+          threshold: 0.3
+        }
       );
       for (let element of document.querySelectorAll(`.${elementClass}`)) {
         observer.observe(element);
