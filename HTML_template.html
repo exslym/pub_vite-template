@@ -215,7 +215,7 @@
       </section>
     </div>
 
-    <!-- GOOGLE ANALYTICS (GA4 only) VIDEO VIEWS -->
+    <!-- GOOGLE ANALYTICS (GA4 + YM) VIDEO VIEWS -->
     <script type="text/javascript">
       const videos = document.querySelectorAll('video');
 
@@ -223,7 +223,7 @@
         let timer = null;
         let sec = 0;
 
-        const startTimer = function startTimer(eventName, property, data, duration) {
+        const startTimer = function startTimer(eventName, property, data, duration, kpi) {
           return setInterval(() => {
             const seconds = sec + 1;
             const minutes = Math.floor(seconds / 60);
@@ -264,6 +264,48 @@
                 sendGTAG(eventName, property, `${data} - end`);
                 break;
             }
+
+            // YM:
+            switch (true) {
+              // START
+              case seconds === 1:
+                sendYM(`${data} - start`);
+                // console.log(`${data} - start`);
+                break;
+              // INTERVALS
+              case seconds === 15:
+                sendYM(`${data} - 15s`);
+                // console.log(`${data} - 15s`);
+                break;
+              case seconds === 30:
+                sendYM(`${data} - 30s`);
+                // console.log(`${data} - 30s`);
+                break;
+              case seconds === 60:
+                sendYM(`${data} - 1m`);
+                // console.log(`${data} - 1m`);
+                break;
+              // KPI - задать в СЕКУНДАХ цель KPI для каждого видео в аттрибуте data-kpi="" (согласовать KPI с КАМом)
+              case seconds === kpi:
+                if (kpi >= 60) {
+                  if (kpi % 60 === 0) {
+                    sendYM(`${data}(KPI) - ${kpi / 60}m`);
+                    // console.log(`${data}(KPI) - ${kpi / 60}m`);
+                  } else {
+                    sendYM(`${data}(KPI) - ${Math.floor(kpi / 60)}m ${kpi % 60}s`);
+                    // console.log(`${data}(KPI) - ${Math.floor(kpi / 60)}m ${kpi % 60}s`);
+                  }
+                } else {
+                  sendYM(`${data}(KPI) - ${kpi}s`);
+                  // console.log(`${data}(KPI) - ${kpi}s`);
+                }
+                break;
+              // END
+              case seconds === duration:
+                sendYM(`${data} - end`);
+                // console.log(`${data} - end`);
+                break;
+            }
             sec++;
           }, 1000);
         };
@@ -276,8 +318,9 @@
           const eventName = `Video_${pageTitleGA}`;
           const property = video.dataset.label;
           const data = video.dataset.label;
+          const kpi = Number(video.dataset.kpi);
 
-          timer = startTimer(eventName, property, data, duration);
+          timer = startTimer(eventName, property, data, duration, kpi);
         });
 
         video.addEventListener('pause', () => (timer = stopTimer()));
