@@ -79,9 +79,9 @@ Screen_10
 Название параметра:
 
 ```
-Кнопка "Button_1"
-Кнопка "Button_2"
-Кнопка "Button_3"
+Button_1
+Button_2
+Button_3
 ...
 ...
 ```
