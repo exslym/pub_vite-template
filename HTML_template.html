@@ -83,7 +83,10 @@
       const sendGTAG = (eventName, property, label) => {
         let eventProperty = new Object();
         eventProperty = { [property]: label };
-        if (window.location.origin.includes('doktornarabote')) {
+        if (
+          window.location.origin.includes('doktornarabote') ||
+          window.location.origin.includes('smartpharma')
+        ) {
           if (typeof gtag === 'function') {
             gtag('event', eventName, eventProperty);
             // console.log('GA', eventName, eventProperty);
@@ -101,7 +104,10 @@
     <!-- YANDEX METRIKA SEND EVENTS FUNCTION -->
     <script type="text/javascript">
       const sendYM = (label) => {
-        if (window.location.origin.includes('doktornarabote')) {
+        if (
+          window.location.origin.includes('doktornarabote') ||
+          window.location.origin.includes('smartpharma')
+        ) {
           if (typeof ym === 'function') {
             // здесь вместо YYYYYYYY - номер счетчика
             ym(YYYYYYYY, 'reachGoal', label);
